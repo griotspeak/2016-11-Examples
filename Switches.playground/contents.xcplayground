@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='0 - If'/>
+        <page name='1 - Simple Bool Switch'/>
+        <page name='2 - Two Bool Switch (Tuple)'/>
+        <page name='3 - Switch over string'/>
+        <page name='Untitled Page 4'/>
+        <page name='5 Custom enums'/>
+        <page name='6 Custom enums with associated values'/>
+        <page name='variable'/>
+    </pages>
+</playground>
