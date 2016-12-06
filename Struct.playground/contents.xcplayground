@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Tuples'/>
+        <page name='Simple Structs'/>
+        <page name='Stored and Computed Properties'/>
+        <page name='Memberwise initializers'/>
+        <page name='LossOfMemberwiseInitilaer'/>
+        <page name='Untitled Page'/>
+        <page name='Untitled Page 2'/>
+        <page name='Untitled Page 4'/>
+        <page name='Untitled Page 3'/>
+    </pages>
+</playground>
