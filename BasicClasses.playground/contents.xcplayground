@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Value Semantics - Intro'/>
+        <page name='Reference Semantics - Intro'/>
+        <page name='Value Semantics - Parameters'/>
+        <page name='Reference Semantics - Parameters'/>
+        <page name='Value Semantics - let vs var'/>
+        <page name='Reference Semantics - let vs var'/>
+    </pages>
+</playground>
