@@ -58,8 +58,16 @@
 			isa = PBXGroup;
 			children = (
 				32D154D51DFB0C08001F36F3 /* main.swift */,
+				32D155091DFF1FE8001F36F3 /* New Group */,
 			);
 			path = take3_func;
+			sourceTree = "<group>";
+		};
+		32D155091DFF1FE8001F36F3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +261,7 @@
 				32D154DB1DFB0C08001F36F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
