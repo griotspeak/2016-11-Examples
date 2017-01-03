@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="CharacterViewController" customModule="RPG2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fIY-M4-pQH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ytM-9f-6LN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cac-VU-5Jv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNJ-27-Bmq">
+                                <rect key="frame" x="165" y="323" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVG-LB-dRR">
+                                <rect key="frame" x="166.5" y="352" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAv-yj-wkB">
+                                <rect key="frame" x="16" y="617" width="31" height="30"/>
+                                <state key="normal" title="Hurt"/>
+                                <connections>
+                                    <action selector="hurt" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQ6-xA-SPE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-Dl-uE6">
+                                <rect key="frame" x="328" y="617" width="31" height="30"/>
+                                <state key="normal" title="Heal"/>
+                                <connections>
+                                    <action selector="heal" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZGC-M6-8xJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ytM-9f-6LN" firstAttribute="top" secondItem="3eb-Dl-uE6" secondAttribute="bottom" constant="20" id="2vz-KF-HH4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3eb-Dl-uE6" secondAttribute="trailing" id="884-no-9YF"/>
+                            <constraint firstItem="PVG-LB-dRR" firstAttribute="centerX" secondItem="sNJ-27-Bmq" secondAttribute="centerX" id="ARR-y9-a64"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xAv-yj-wkB" secondAttribute="leading" id="D5J-uV-A1u"/>
+                            <constraint firstItem="PVG-LB-dRR" firstAttribute="top" secondItem="sNJ-27-Bmq" secondAttribute="bottom" constant="8" symbolic="YES" id="Fw0-nL-7Q6"/>
+                            <constraint firstItem="sNJ-27-Bmq" firstAttribute="centerY" secondItem="cac-VU-5Jv" secondAttribute="centerY" id="OL5-3V-7oN"/>
+                            <constraint firstItem="ytM-9f-6LN" firstAttribute="top" secondItem="xAv-yj-wkB" secondAttribute="bottom" constant="20" id="vKX-Gj-lIQ"/>
+                            <constraint firstItem="sNJ-27-Bmq" firstAttribute="centerX" secondItem="cac-VU-5Jv" secondAttribute="centerX" id="xNy-uW-VYf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="classLabel" destination="PVG-LB-dRR" id="FBN-lT-bpn"/>
+                        <outlet property="nameLabel" destination="sNJ-27-Bmq" id="RoY-Wg-Eyi"/>
+                    </connections>
+                </viewController>
+            </objects>
+        </scene>
+    </scenes>
+</document>

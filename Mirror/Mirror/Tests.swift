@@ -10,6 +10,7 @@ import Foundation
 
 func runTests() {
     test(testName: "Truth!", condition: true, failureMessage: "WAT?")
+    testInputFunction()
 }
 
 func testInputFunction() {

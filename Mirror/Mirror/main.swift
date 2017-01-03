@@ -10,9 +10,9 @@ import Foundation
 
 let arguments = Array(CommandLine.arguments.dropFirst())
 
-if (arguments.isEmpty == false) && arguments[0] == "--run-tests" {
+//if (arguments.isEmpty == false) && arguments[0] == "--run-tests" {
     runTests()
-}
+//}
 
 func uglyAskNumber() -> Int {
     var number: Int!
