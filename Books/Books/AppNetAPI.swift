@@ -13,7 +13,7 @@ internal struct AppNetAPI {
         case invalidJSONData
     }
 
-    internal static let globalStreamURL: URL = URL(string: "https://api.app.net/posts/stream/global")!
+    internal static let globalStreamURL: URL = URL(string: "https://tiy-todo-angular.herokuapp.com/get-all-books.json")!
 
     internal static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
