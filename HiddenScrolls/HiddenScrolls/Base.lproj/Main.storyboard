@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HiddenScrolls" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MmS-yo-YEl"/>
+                        <viewControllerLayoutGuide type="bottom" id="q2b-7K-E07"/>
+                    </layoutGuides>
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="UiZ-O2-o5b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngc-Sd-PKA" userLabel="Outer View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtW-iX-ecq" userLabel="Inner View">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="667"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.043376036710000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ZtW-iX-ecq" firstAttribute="leading" secondItem="ngc-Sd-PKA" secondAttribute="leading" id="Z06-pz-9fN"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZtW-iX-ecq" secondAttribute="bottom" id="jLp-tn-Vpw"/>
+                                    <constraint firstItem="ZtW-iX-ecq" firstAttribute="width" secondItem="ngc-Sd-PKA" secondAttribute="width" id="xgB-F1-vYY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ngc-Sd-PKA" firstAttribute="leading" secondItem="UiZ-O2-o5b" secondAttribute="leading" id="1HW-gY-R87"/>
+                            <constraint firstItem="ZtW-iX-ecq" firstAttribute="height" secondItem="UiZ-O2-o5b" secondAttribute="height" id="2Ot-oL-4jo"/>
+                            <constraint firstItem="ngc-Sd-PKA" firstAttribute="height" secondItem="UiZ-O2-o5b" secondAttribute="height" multiplier="1.5:1" id="OZT-hQ-hWL"/>
+                            <constraint firstItem="ngc-Sd-PKA" firstAttribute="width" secondItem="UiZ-O2-o5b" secondAttribute="width" id="nbj-Oa-Cq7"/>
+                            <constraint firstItem="ngc-Sd-PKA" firstAttribute="top" secondItem="UiZ-O2-o5b" secondAttribute="topMargin" id="v46-b5-AHf"/>
+                        </constraints>
+                    </scrollView>
+                    <connections>
+                        <outlet property="outerView" destination="ngc-Sd-PKA" id="Yp5-fL-Lia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
