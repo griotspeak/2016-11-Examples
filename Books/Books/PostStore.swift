@@ -14,6 +14,7 @@ enum PostsResult {
 }
 
 internal final class PostStore {
+
     enum Error: Swift.Error {
         case http(HTTPURLResponse)
         case system(Swift.Error)
@@ -42,13 +43,14 @@ internal final class PostStore {
 
     internal func processRecentPostsRequest(data: Data, error: Swift.Error?) -> PostsResult {
 
-        if let dictionary = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any],
-            let postDictionaries = dictionary["data"] as? [[String:Any]] {
-            if let posts = Post.array(from: postDictionaries) {
-                return .success(posts)
-            } else {
-                return .failure(.appNet(.invalidJSONData))
-            }
+        if let dictionary = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [[String: Any]] {
+            print(dictionary)
+            fatalError()
+//            if let posts = Post.array(from: postDictionaries) {
+//                return .success(posts)
+//            } else {
+//                return .failure(.appNet(.invalidJSONData))
+//            }
         } else {
             return .failure(.system(error!))
         }
