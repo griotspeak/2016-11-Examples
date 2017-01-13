@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,6 +47,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Avatar Editing View Controller-->
+        <scene sceneID="Qvp-n3-ZtW">
+            <objects>
+                <viewController storyboardIdentifier="AvatarEditing" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VAm-cv-4Kt" customClass="AvatarEditingViewController" customModule="CharacterCreatorToo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pX8-Er-jEY"/>
+                        <viewControllerLayoutGuide type="bottom" id="yjl-Er-H8X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLU-sR-ryd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-Cp-6Du">
+                                <rect key="frame" x="36" y="318" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VAm-cv-4Kt" id="Kuj-cU-gIB"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O14-OY-yxR">
+                                <rect key="frame" x="166" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx1-z3-GaI">
+                                <rect key="frame" x="174" y="519" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="endEditing:" destination="VAm-cv-4Kt" eventType="touchUpInside" id="9Mk-Cs-iGU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1fM-Cp-6Du" firstAttribute="centerY" secondItem="GLU-sR-ryd" secondAttribute="centerY" id="5pq-6J-Kpu"/>
+                            <constraint firstItem="1fM-Cp-6Du" firstAttribute="centerX" secondItem="GLU-sR-ryd" secondAttribute="centerX" id="Ab8-a9-9Wt"/>
+                            <constraint firstItem="1fM-Cp-6Du" firstAttribute="leading" secondItem="GLU-sR-ryd" secondAttribute="leadingMargin" constant="20" id="MJk-jq-gGI"/>
+                            <constraint firstItem="O14-OY-yxR" firstAttribute="centerX" secondItem="1fM-Cp-6Du" secondAttribute="centerX" id="QqX-18-XxS"/>
+                            <constraint firstItem="1fM-Cp-6Du" firstAttribute="top" secondItem="O14-OY-yxR" secondAttribute="bottom" constant="8" id="SUw-FC-kVO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="1fM-Cp-6Du" id="E3z-Bb-zgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBp-6i-FEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="38"/>
         </scene>
     </scenes>
 </document>

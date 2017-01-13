@@ -16,6 +16,7 @@
 		3297A1FA1E293892006B91DC /* CharacterCreatorTooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3297A1F91E293892006B91DC /* CharacterCreatorTooUITests.swift */; };
 		32C0F2BE1E2939A700924054 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0F2BD1E2939A700924054 /* Avatar.swift */; };
 		32C0F2C01E293A5C00924054 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0F2BF1E293A5C00924054 /* AvatarCell.swift */; };
+		32C0F2C21E293D9500924054 /* AvatarEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C0F2C11E293D9500924054 /* AvatarEditingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3297A1FB1E293892006B91DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C0F2BD1E2939A700924054 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		32C0F2BF1E293A5C00924054 /* AvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		32C0F2C11E293D9500924054 /* AvatarEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarEditingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				3297A1DB1E293892006B91DC /* AvatarListViewController.swift */,
 				32C0F2BF1E293A5C00924054 /* AvatarCell.swift */,
 				32C0F2BD1E2939A700924054 /* Avatar.swift */,
+				32C0F2C11E293D9500924054 /* AvatarEditingViewController.swift */,
 				3297A1DD1E293892006B91DC /* Main.storyboard */,
 				3297A1E01E293892006B91DC /* Assets.xcassets */,
 				3297A1E21E293892006B91DC /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C0F2C21E293D9500924054 /* AvatarEditingViewController.swift in Sources */,
 				32C0F2BE1E2939A700924054 /* Avatar.swift in Sources */,
 				3297A1DC1E293892006B91DC /* AvatarListViewController.swift in Sources */,
 				32C0F2C01E293A5C00924054 /* AvatarCell.swift in Sources */,
