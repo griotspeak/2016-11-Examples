@@ -86,6 +86,4 @@ class CharacterListDataSource: NSObject, UITableViewDataSource {
         
         return cell
     }
-    
 }
-
