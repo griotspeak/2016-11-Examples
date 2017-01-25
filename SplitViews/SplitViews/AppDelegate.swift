@@ -26,9 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let contactVC = mainStoryboard.instantiateViewController(withIdentifier: "ContactDetails") as! ContactViewController
 
 
-        contactListVC.selectionClosure = { contact in
-            contactVC.contact = contact
-            splitVC.showDetailViewController(contactVC, sender: nil)
+        contactListVC.selectionClosure = {
+            [weak weakSplitVC = splitVC, weak weakContactVC = contactVC] (contact) in
+
+            guard let _contactVC = weakContactVC else { return }
+            _contactVC.contact = contact
+            weakSplitVC?.showDetailViewController(_contactVC, sender: nil)
         }
 
         let masterNav = UINavigationController(rootViewController: contactListVC)
