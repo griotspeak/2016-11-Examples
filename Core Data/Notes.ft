@@ -1,0 +1,72 @@
+Core Data
+	- Retrieve objects from the Store
+	- Keep track of scratchpad changes to objects
+	- Save objects / Persist objects
+
+Persistent Store
+	A place to put information meant to save between runs of the app
+	- a file
+	- a sqlite database
+	- anything
+
+
+
+
+Example of code for fetching
+``` swift
+import CoreData
+let moc: NSManagedObjectContext = …
+…
+var request = NSFetchRequest(entityName: "User")
+
+request.predicate = NSPredicate("postCount > 9000")
+request.sortDescriptors = [
+	NSSortDescriptor(key: "familyName", ascending: true),
+	NSSortDescriptor(key: "givenName", ascending: true),
+	NSSortDescriptor(key: "displayName", ascending: true)
+]
+let users: [User] = try! moc.executeFetchRequest(request)
+```
+
+
+`NSManagedObject`
+A class provided in the framework that knows how to persist itself using the machinery of Core Data. It does this using Key-Value Coding. (`value(key:)`, `setValue(_:key:)`)
+
+
+
+## Arity
+### Many to Many
+- Users have contacts.
+	- Tim can have many contacts
+	- Each of those contacts can have many contacts
+- Events and attendees
+	- An event has many attendees
+	- Users can attend multiple events
+### One to Many
+- Orginizations to events
+	- An organization can throw many events
+	- an event can only have one organization
+
+### One to One
+- Dance partner
+	- I can have one partner
+	- I am their only partner
+
+
+
+
+## Delete Rules
+For each relationship, you have two rules. (One in each direction)
+- Nullify
+	- walk to the inverse relationship and set the value to `nil`
+	- (For each employee: "You no longer have a department")
+- Deny
+	- Block the deletion until there are no objects actually related. 
+	- (Departments with employees cannot be closed/deleted)
+- Cascade
+	- Walk to the objects pointed to and delete them.
+	- (Everyone in the department is fired because it closed.)
+- No Action
+	- do nothing about the inverse relationship and proceed with the delete
+	- DON'T DO THIS
+
